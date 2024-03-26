@@ -26,5 +26,4 @@ def create_app():
     
     with app.app_context():
         db.create_all()
-    print(type(app.url_map))
     return app
