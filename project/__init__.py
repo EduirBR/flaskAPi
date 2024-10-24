@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from .settings import Config
 from werkzeug.routing import Map
 db = SQLAlchemy()
+from apps.contacts.route import contactBlueprint
 
 def create_app():
     app = Flask(__name__)
@@ -20,7 +21,6 @@ def create_app():
         }
         return response
 
-    from apps.contacts.route import contactBlueprint
     app.register_blueprint(contactBlueprint)
 
     

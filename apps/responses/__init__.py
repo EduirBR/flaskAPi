@@ -4,5 +4,4 @@ def customResponse(data, status_code:int, message='No message', error=False):
         'error': error,
         'message': message
     }
-    print(response)
     return response, status_code
